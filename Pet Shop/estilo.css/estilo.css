@@ -1,0 +1,136 @@
+
+
+.html {
+    }
+
+  .redes{
+    padding: 12px;
+    text-decoration: none;
+}
+
+  .header {
+    background-color: #ffffff;
+    color: #5a5a4b;
+    padding: 2px;
+    text-align: center;
+  }
+
+  .menu {
+    margin: 0px;
+    padding: 5px;
+    float:none;
+    background-color: #5a5a4b;
+    text-align: right;
+  }
+  
+  .menu a {
+    padding: 8px;
+    margin: 15px;
+    text-decoration: none;
+    background-color: #5a5a4b;
+    color: #dfe6a3;
+    border-radius:10px;     
+  }
+  
+  .menu a:hover {
+    background-color: #5f5e58;
+  }
+  
+
+footer {text-align: center;}
+
+.slider{
+  width: 50%;
+  height: 0%;
+  overflow:hidden;
+
+}
+.slider ul{
+  display: flex;
+  animation: cambio 10s infinite alternate linear;
+  width: 390%;
+}
+.slider li{
+  width: 100%;
+  list-style: none;
+  padding: 40px;
+}
+.slider img{
+  width: 100%;
+  height: 100%;
+}
+@keyframes cambio{
+  0%{margin-left: 0%;}
+  20%{margin-left: 0%;}
+
+  25%{margin-left: -100%;}
+  45%{margin-left: -100%;}
+
+  50%{margin-left: -200%;}
+  70%{margin-left: -200%;}
+
+  75%{margin-left: -300%;}
+  100%{margin-left: -300%;}
+
+
+}
+
+
+
+
+
+/*responsive*/
+
+head{
+  padding: 10px;
+  margin: 20px;
+  border: #000000;
+  border-style: double;
+}
+
+nav{
+  padding: 10px;
+  margin: px;
+  border: #08f13a;
+  border-style: double;
+}
+
+body{
+  padding: 8px;
+  margin: 0px;
+  border: #2e14be;
+  border-style: double;
+}
+
+header{
+  padding: 0px;
+  margin: 0px;
+  border: #e40f92;
+  border-style: double;
+
+}
+
+main {
+  padding: 10px;
+  margin: 100px;
+  border: #1cb0bb;
+  border-style: double;
+}
+
+
+footer {
+  padding: 10px;
+  margin: 0px;
+  border: #a7450d;
+  border-style: double;
+
+}
+
+aside{
+  padding: 10px;
+  margin: 60px;
+  border: #e7f56e;
+  border-style: double;
+
+}
+
