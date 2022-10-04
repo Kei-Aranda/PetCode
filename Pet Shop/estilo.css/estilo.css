@@ -1,7 +1,8 @@
 
 
-.html {
-    }
+h1{
+  font-family: 'Poppins', sans-serif;
+}
 
   .redes{
     padding: 12px;
@@ -21,6 +22,7 @@
     float:none;
     background-color: #5a5a4b;
     text-align: right;
+    font-family: 'Poppins', sans-serif;
   }
   
   .menu a {
@@ -39,15 +41,18 @@
 
 footer {text-align: center;}
 
+
+/*SLIDER*/
+
 .slider{
-  width: 50%;
+  width: 60%;
   height: 0%;
   overflow:hidden;
-
 }
+
 .slider ul{
   display: flex;
-  animation: cambio 10s infinite alternate linear;
+  animation: cambio 10s infinite alternate ;
   width: 390%;
 }
 .slider li{
@@ -71,66 +76,117 @@ footer {text-align: center;}
 
   75%{margin-left: -300%;}
   100%{margin-left: -300%;}
+}
 
+/*CUADRO DE REDES*/
 
+.redescuadro{
+  background-color:#dfe6a3;
+  border-radius: 50px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-left: 65%;
+  margin-top: -25%;
+
+  max-width: 400px;
+  min-width: 400px;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+.mapacuadro{
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
 }
 
 
 
 
-
-/*responsive*/
+/*responsive,,,,PONELE*/
 
 head{
-  padding: 10px;
-  margin: 20px;
-  border: #000000;
-  border-style: double;
+ 
 }
 
 nav{
   padding: 10px;
   margin: px;
-  border: #08f13a;
-  border-style: double;
+  border-style: none
 }
 
 body{
-  padding: 8px;
+  padding: 0px;
   margin: 0px;
-  border: #2e14be;
-  border-style: double;
+  
 }
 
 header{
-  padding: 0px;
-  margin: 0px;
-  border: #e40f92;
-  border-style: double;
 
 }
 
 main {
-  padding: 10px;
-  margin: 100px;
-  border: #1cb0bb;
-  border-style: double;
+ 
 }
-
 
 footer {
   padding: 10px;
-  margin: 0px;
-  border: #a7450d;
-  border-style: double;
-
+  margin-top: 110px;
 }
 
-aside{
+/*TURNOS*/
+/*FORMULARIO*/
+
+.formulario{
+  background-color:#dfe6a3;
+  border-radius: 50px;
   padding: 10px;
-  margin: 60px;
-  border: #e7f56e;
-  border-style: double;
+  text-align: center;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 350px;
+  
+
+  max-width: 300px;
+  min-width: 300px;
+  min-height: 600px;
+  max-height: 600px;
 
 }
 
+.boton-enviar{
+  padding: 8px;
+  font-weight: bold;
+  border: none;
+  color: #ffffff;
+  background-color: grey;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif
+}
+.boton-enviar:hover{
+  background-color: #e7b293;
+}
+.boton-borrar{
+    padding: 8px;
+    font-weight: bold;
+    border: none;
+    color: #ffffff;
+    background-color: grey;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif
+  }
+
+  .boton-borrar:hover{
+    background-color: #e7b293;
+  }
+
+  label{
+    font-family: 'Poppins', sans-serif
+  }
+.gatito{
+  margin-left: 50%;
+  margin-bottom: -70%;
+}
