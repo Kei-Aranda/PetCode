@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+.menu {
+  float:none;
+  background-color: #5a5a4b;
+  text-align: right;
+}
+  
+.menu a {
+  background-color: #5a5a4b;
+  color: #dfe6a3;
+  border-radius:10px;     
+}
+  
+.menu a:hover {
+  background-color: #5f5e58;
+}
+  
+footer {text-align: center;}
+
+  /*SLIDER*/
+
+  .slider{
+    width: 60%;
+    height: 0%;
+    overflow:hidden;
+  }
+
+  .slider ul{
+    display: flex;
+    animation: cambio 10s infinite alternate ;
+    width: 400%;
+  }
+  .slider li{
+    width: 100%;
+    list-style: none;
+  }
+  .slider img{
+    width: 100%;
+    height: 100%;
+  }
+  @keyframes cambio{
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+  }
+
+/*CUADRO DE REDES*/
+
+.redescuadro{
+  background-color:#dfe6a3;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.mapacuadro{
+  text-align: left;
+}
+
+/*responsive*/
+
+/*TURNOS*/
+
+/*FORMULARIO*/
+
+.formulario{
+  background-color:#dfe6a3;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.boton{
+  font-weight: bold;
+  border: none;
+  color: #ffffff;
+  background-color: grey;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.boton:hover{
+  background-color: #e7b293;
+}

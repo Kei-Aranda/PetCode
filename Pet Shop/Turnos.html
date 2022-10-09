@@ -1,116 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turnos</title>
-    
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./estilo.css/estilo.css">
-
-    <div class="header"> 
-        <h1>Pet Code</h1> 
-    </div>
-    
-    
-    <div>
-    <div class="menu">
-         <nav>
-            <a class="nav" href="index.html">Menu</a>
-            <a class="nav" href="Turnos.html">Turnos</a>
-            <a class="nav" href="PetShop.html">Pet Shop</a>
-            <a class="nav" href="Adopcion.html">Adopcion</a>
-         </nav>
-    </div>
-    </div>
-
+    <link rel="stylesheet" href="./estilo/estilo.css">
+    <title>Turnos</title>
 </head>
 
-<body>
-
-    
-<div class="gatito">
-    <img width="70%" src="./fotos/gati1.jpg" alt="">
-
-</div>
-
-<main>
-    <div class="formulario">
-
-        <h1>Solicitar turno online</h1>
-
-
-        <form action="link" method="post" target="_blank">
-
-            <label for="firstname">Nombre:</label> 
-            <input size="30" type="text" name="firstname" class="campo"><br> <br>
-            
-            <label for="lastname">Apellido:</label>
-            <input size="30" type="text" name="lastname" class="campo"><br> <br>
-
-            <label for="tel">Telefono:</label>
-            <input size="30" type="tel" name="tel" placeholder="+54 11" class="campo"><br> <br>
-
-            <label for="email">Email:</label>
-            <input size="30" type="text" name="email" placeholder="@hotmail.com" class="campo"><br> <br>
-
-            <label for="date">Fecha:</label>
-            <input size="30" type="date" name="date" class="campo"><br> <br>
-
-            
-            <label for="horario" class="campo" >Horario</label>
-            <select name="horario" id="hoario">
-                <option value="0"></option>
-                <option value="1">Mañana</option>
-                <option value="2">Tarde</option>
-                <option value="3">Noche</option>
-            </select> <br> <br> <br>
-
-
-            <input type="submit" value="Enviar" class="boton-enviar">
-            <input type="submit" value="Borrar" class="boton-borrar">
-        </form>
-    </div>
-
-
-
-
-</main>
-    
-<footer>
-    <nav>
-        <a class="redes" target="_blank" href="https://">
-        <img width="40px" src="./iconos/email.png" alt="email">
-        </a>
-        <a class="redes" target="_blank" href="https://">
-        <img width="40px" src="./iconos/whatsapp.png" alt="whatsapp">
-        </a>
-        <a class="redes" target="_blank" href="https://">
-        <img width="40px" src="./iconos/instagram.png" alt="instagram">
-        </a>
-        <a class="redes" target="_blank" href="https://">
-        <img width="40px" src="./iconos/facebook.png" alt="facebook">
-        </a>
+<header>
+    <h1>Pet Code</h1>
+    <nav class="menu">
+        <a href="index.html">Menu</a>
+        <a href="Turnos.html">Turnos</a>
+        <a href="PetShop.html">Pet Shop</a>
+        <a href="Adopcion.html">Adopcion</a>
     </nav>
 
-    <div class="mapacuadro">
-        <nav>
+</header>
+
+<body>
+    <main>
+        <div class="formulario">
+            <h1>Solicitar turno online</h1>
+
+            <form action="link" method="post" target="_blank">
+
+                <label for="firstname">Nombre:</label>
+                <input size="30" type="text" name="firstname" class="campo">
+
+                <label for="lastname">Apellido:</label>
+                <input size="30" type="text" name="lastname" class="campo">
+
+                <label for="tel">Telefono:</label>
+                <input size="30" type="tel" name="tel" placeholder="+54 11" class="campo">
+
+                <label for="email">Email:</label>
+                <input size="30" type="text" name="email" placeholder="@hotmail.com" class="campo">
+
+                <label for="date">Fecha:</label>
+                <input size="30" type="date" name="date" class="campo">
+
+                <label for="horario" class="campo">Horario</label>
+                <select name="horario" id="hoario">
+                    <option value="0"></option>
+                    <option value="1">Mañana</option>
+                    <option value="2">Tarde</option>
+                    <option value="3">Noche</option>
+                </select>
+
+
+                <input type="submit" value="Enviar" class="boton">
+                <input type="reset" value="Borrar" class="boton">
+            </form>
+        </div>
+
+        <img width="70%" src="./fotos/gati1.jpg" alt="">
+
+        <div class="redescuadro">
+            <p>Seguinos en nuestras redes sociales!</p>
+            <nav>
+                <a target="_blank" href="https://">
+                    <img width="40px" src="./iconos/email.png" alt="email">
+                </a>
+                <a target="_blank" href="https://">
+                    <img width="40px" src="./iconos/whatsapp.png" alt="whatsapp">
+                </a>
+                <a target="_blank" href="https://">
+                    <img width="40px" src="./iconos/instagram.png" alt="instagram">
+                </a>
+                <a target="_blank" href="https://">
+                    <img width="40px" src="./iconos/facebook.png" alt="facebook">
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <footer>
+        <nav class="mapacuadro">
             <h4>Dirección</h4>
             <p>Av. Corrientes 2937, Buenos Aires</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488.168473131593!2d-58.40747904803529!3d-34.60433971098559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8d48d408d5%3A0xd837a6cfdaa8f596!2sAv.%20Corrientes%202937%2C%20C1193%20AAB%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1664846753253!5m2!1ses-419!2sar" 
-            width="700" 
-            height="100" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        </nav>    
-        </div>  
-</footer>
-
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488.168473131593!2d-58.40747904803529!3d-34.60433971098559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8d48d408d5%3A0xd837a6cfdaa8f596!2sAv.%20Corrientes%202937%2C%20C1193%20AAB%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1664846753253!5m2!1ses-419!2sar"
+                width="700" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </nav>
+    </footer>
 </body>
+
 </html>

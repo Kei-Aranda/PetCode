@@ -1,0 +1,102 @@
+/* Pet shop */
+html {
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: white;
+}
+header {
+    margin: 0;
+    margin-top: 0;
+    padding: 5px;
+    width: auto;
+    height: 70px;
+    background-color: #68a691;
+    box-shadow: 0px 2px 4px 0px #908989;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar {
+    margin: auto;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Logo {
+    float: left;
+    margin: 10px;
+    width: 60px;
+    cursor: pointer;
+}
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: #041321;
+    font-family: PuppyBellies , Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.Carrito {
+    float: right;
+    margin:  22px 40px;
+}
+.navbar ul li::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: 0.2s ease-in-out;
+}
+
+.navbar ul li:hover::before {
+    width: 100%;
+}
+main{
+    margin: 0;
+    padding: 0;
+}
+.Filtrodealimentos {
+    width: auto;
+    height: 150px;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+}
+.imgRedonda1 {
+    width: 140px;
+    height: 140px;
+    border-radius: 150px;
+    justify-content: center;
+}
+.imgRedonda2 {
+    width: 140px;
+    height: 140px;
+    border-radius: 150px;
+    justify-content: center;
+}
+footer {
+    margin-top: auto;
+    width: auto;
+    background-color: #68a691;
+    box-shadow: 0px 2px 4px 0px #908989;
+    justify-content: space-between;
+    align-items: center;
+}
