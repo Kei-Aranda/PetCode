@@ -57,6 +57,10 @@ footer{ grid-area: footer;}
   .mapacuadro iframe{
     width: 100%;
   }
+
+  .menu {
+    justify-content: center;
+  }
 }
 
 .menu {
