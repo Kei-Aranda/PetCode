@@ -1,8 +1,4 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 h1{
   font-family: 'Poppins', sans-serif;
@@ -16,10 +12,10 @@ h1{
   .header {
     background-color: #ffffff;
     color: #5a5a4b;
+    padding: 2px;
     text-align: center;
   }
 
-  /* MENU*/
   .menu {
     margin: 0px;
     padding: 5px;
@@ -27,9 +23,8 @@ h1{
     background-color: #5a5a4b;
     text-align: right;
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: row-reverse;
   }
+  
   .menu a {
     padding: 8px;
     margin: 15px;
@@ -38,34 +33,13 @@ h1{
     color: #dfe6a3;
     border-radius:10px;     
   }
+  
   .menu a:hover {
     background-color: #5f5e58;
   }
-  nav{
-    padding: 10px;
-  }
+  
 
-/* FOOTER*/
-footer {
-  margin-top: 10px;
-  padding-top: 10px;
-  color: #dfe6a3;
-  background-color: #5a5a4b;
-  text-align: right;
-  font-family: 'Poppins', sans-serif;
-}
-.footer{
-display: grid;
-grid-template-columns: auto auto;
-justify-content: center;
-row-gap: px;
-}
-.footer h4{
-  text-align: center;
-}
-.footer .mapacuadro{
-  margin-left: 50px;
-}
+footer {text-align: center;}
 
 
 /*SLIDER*/
@@ -84,7 +58,7 @@ row-gap: px;
 .slider li{
   width: 100%;
   list-style: none;
-  padding: 70px;
+  padding: 40px;
 }
 .slider img{
   width: 100%;
@@ -108,29 +82,60 @@ row-gap: px;
 
 .redescuadro{
   background-color:#dfe6a3;
+  border-radius: 50px;
+  padding: 10px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
-  border-radius: 50px;
-  padding: 10px;
-
-  margin-right: 5%;
   margin-left: 65%;
   margin-top: -25%;
-  margin-bottom: 20%;
 
   max-width: 400px;
   min-width: 400px;
   min-height: 100px;
-  max-height: 100px;
+  max-height: 200px;
+}
+
+.mapacuadro{
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+}
+
+
+
+
+/*responsive,,,,PONELE*/
+
+head{
+ 
+}
+
+nav{
+  padding: 10px;
+  margin: px;
+  border-style: none
+}
+
+body{
+  padding: 0px;
+  margin: 0px;
+  
+}
+
+header{
 
 }
 
-/*responsive,,,,PONELE */
+main {
+ 
+}
 
+footer {
+  padding: 10px;
+  margin-top: 110px;
+}
 
 /*TURNOS*/
-
 /*FORMULARIO*/
 
 .formulario{
@@ -139,9 +144,8 @@ row-gap: px;
   padding: 10px;
   text-align: center;
   font-size: 18px;
-
-  margin-left: 100px;
-  margin-top: 69%;
+  margin-left: 30px;
+  margin-top: 350px;
   
 
   max-width: 300px;
@@ -150,22 +154,7 @@ row-gap: px;
   max-height: 600px;
 
 }
-/*BOTONES ENVIAR-BORRAR
 
-  background-color:#dfe6a3;
-  border-radius: 50px;
-  padding: 10px;
-  text-align: center;
-  font-size: 18px;
-  margin-left: 100px;
-  margin-top: 350px;
-
-  max-width: 300px;
-  min-width: 300px;
-  min-height: 600px;
-  max-height: 600px;
-
-*/
 .boton-enviar{
   padding: 8px;
   font-weight: bold;
@@ -200,25 +189,4 @@ row-gap: px;
 .gatito{
   margin-left: 50%;
   margin-bottom: -70%;
-}
-
-.redescuadro-turnos{
-  background-color:#dfe6a3;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-
-  border-radius: 50px;
-  padding: 10px;
-  margin-right: 21%;
-  margin-left: 46%;
-  margin-top: -20%;
-  margin-bottom: 13%;
-
-  max-width: 400px;
-  min-width: 400px;
-  min-height: 100px;
-  max-height: 100px;
-
-
 }

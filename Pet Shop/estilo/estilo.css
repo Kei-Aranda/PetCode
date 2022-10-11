@@ -1,0 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+/*Maquetado de los HTML*/
+
+header, .menu, main, #aside, footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#index-grid{
+  display: grid;
+  grid-template-areas:  ' header header'
+                        ' barra barra'
+                        ' main aside'
+                        'footer footer';
+  grid-template-columns: 65% auto;
+  grid-template-rows: 100px auto auto auto;
+  gap: 0 20px;
+}
+
+header{
+  grid-area: header;
+  color: #5a5a4b;
+  padding: 2px;
+}
+
+.menu {
+  grid-area: barra;
+  justify-content: right;
+}
+
+#index-main{ grid-area: main;}
+#aside{ grid-area: aside;}
+footer{ grid-area: footer;}
+
+@media only screen and (max-width: 980px) {
+  #index-grid{
+    grid-template-areas:  'header'
+                          'barra'
+                          'main'
+                          'aside'
+                          'footer';
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto auto auto auto;
+  }
+
+  #aside{
+    margin: 20px 0 20px;
+  }
+
+  .mapacuadro iframe{
+    width: 100%;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+}
+
+.menu {
+  float:none;
+  background-color: #5a5a4b;
+  text-align: right;
+}
+  
+.menu a {
+  background-color: #5a5a4b;
+  color: #dfe6a3;
+  border-radius:10px;
+  margin: 15px;
+  padding: 8px;
+}
+  
+.menu a:hover {
+  background-color: #5f5e58;
+}
+
+  /*SLIDER*/
+
+  .slider{
+    overflow: hidden;
+  }
+
+  .slider ul{
+    display: flex;
+    animation: cambio 10s infinite alternate ;
+    width: 400%;
+  }
+  .slider li{
+    width: 100%;
+    list-style: none;
+  }
+  .slider img{
+    width: 100%;
+    height: 100%;
+  }
+  @keyframes cambio{
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+  }
+
+/*CUADRO DE REDES*/
+
+.redescuadro{
+  background-color:#dfe6a3;
+  border-radius: 50px;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.redescuadro > *{
+  margin: 20px;
+}
+
+#aside a, aside p{
+  padding: 10px;
+  font-size: 18px;
+}
+
+.mapacuadro{
+  padding: 20px;
+  background-color: #5a5a4b;
+  color: #dfe6a3;
+  width: 100%;
+text-align: center;
+}
+
+/*TURNOS*/
+
+/*FORMULARIO*/
+
+.formulario{
+  background-color:#dfe6a3;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.boton{
+  font-weight: bold;
+  border: none;
+  color: #ffffff;
+  background-color: grey;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.boton:hover{
+  background-color: #e7b293;
+}
