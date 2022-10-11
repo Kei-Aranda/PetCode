@@ -7,7 +7,7 @@
 
 /*Maquetado de los HTML*/
 
-header, .menu, main, #aside, footer{
+header, .menu, main, .aside-redes, footer{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@ header, .menu, main, #aside, footer{
   display: grid;
   grid-template-areas:  ' header header'
                         ' barra barra'
-                        ' main aside'
+                        ' main aside-redes'
                         'footer footer';
   grid-template-columns: 65% auto;
   grid-template-rows: 100px auto auto auto;
@@ -36,7 +36,7 @@ header{
 }
 
 #index-main{ grid-area: main;}
-#aside{ grid-area: aside;}
+.aside-redes{ grid-area: aside-redes;}
 footer{ grid-area: footer;}
 
 @media only screen and (max-width: 980px) {
@@ -44,13 +44,13 @@ footer{ grid-area: footer;}
     grid-template-areas:  'header'
                           'barra'
                           'main'
-                          'aside'
+                          'aside-redes'
                           'footer';
     grid-template-columns: 100%;
     grid-template-rows: 100px auto auto auto auto;
   }
 
-  #aside{
+  .aside-redes{
     margin: 20px 0 20px;
   }
 
