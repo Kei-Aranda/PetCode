@@ -116,19 +116,7 @@ nav{
   border-style: none
 }
 
-body{
-  padding: 0px;
-  margin: 0px;
-  
-}
 
-header{
-
-}
-
-main {
- 
-}
 
 footer {
   padding: 10px;
@@ -189,4 +177,71 @@ footer {
 .gatito{
   margin-left: 50%;
   margin-bottom: -70%;
+}
+
+
+
+/*ADOPCION*/
+
+.contenedor{
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: .5rem;
+  row-gap: .5rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.mascota{
+  width: 93%;
+  margin: 20px;
+  border-radius: 50px;
+  overflow: hidden;
+  background: rgb(245, 244, 241);
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+.mascota:hover {
+  transform: translateY(-6%);
+}
+
+.mascota img { 
+  max-width: 100%;
+  height: auto;
+}
+
+.mascota .contenido { 
+  padding: 15px;
+  text-align:left;
+}
+
+.mascota .contenido p { 
+  line-height: 1.5;
+  color: black;
+}
+
+.mascota .contenido > h3 {
+  margin-bottom: 10px;
+  background-color: rgb(209, 189, 145);
+}
+
+@media screen and (max-width:700px) { 
+  .contenedor { 
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .contenedor {
+    grid-template-columns: repeat(2, 1fr)
+  }
+} 
+
+@media screen and (min-width: 1024px) {
+  .contenedor {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
