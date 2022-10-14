@@ -102,9 +102,10 @@ footer{ grid-area: footer;}
                           'barra'
                           'turnos-main'
                           'aside-redes'
+                          'turnos-aside'
                           'footer ';
     grid-template-columns: 100%;
-    grid-template-rows: 100px auto auto auto auto;
+    grid-template-rows: 100px auto auto auto auto auto;
   }
 }
 
