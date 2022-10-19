@@ -5,9 +5,9 @@
   text-decoration: none;
 }
 
-/*Maquetado de los HTML*/
+/*Maquetado de index.html*/
 
-header, .menu, main, #aside, footer{
+header, .menu, #index-main, .aside-redes, footer, #turnos-main, #turnos-aside{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@ header, .menu, main, #aside, footer{
   display: grid;
   grid-template-areas:  ' header header'
                         ' barra barra'
-                        ' main aside'
+                        ' index-main aside-redes'
                         'footer footer';
   grid-template-columns: 65% auto;
   grid-template-rows: 100px auto auto auto;
@@ -33,24 +33,27 @@ header{
 .menu {
   grid-area: barra;
   justify-content: right;
+  float:none;
+  background-color: #5a5a4b;
+  text-align: right;
 }
 
-#index-main{ grid-area: main;}
-#aside{ grid-area: aside;}
+#index-main{ grid-area: index-main;}
+.aside-redes{ grid-area: aside-redes;}
 footer{ grid-area: footer;}
 
 @media only screen and (max-width: 980px) {
   #index-grid{
     grid-template-areas:  'header'
                           'barra'
-                          'main'
-                          'aside'
+                          'index-main'
+                          'aside-redes'
                           'footer';
     grid-template-columns: 100%;
     grid-template-rows: 100px auto auto auto auto;
   }
 
-  #aside{
+  .aside-redes{
     margin: 20px 0 20px;
   }
 
@@ -63,10 +66,66 @@ footer{ grid-area: footer;}
   }
 }
 
-.menu {
-  float:none;
-  background-color: #5a5a4b;
-  text-align: right;
+/*Maquetado de Turnos.html*/
+
+#turnos-grid{
+  display: grid;
+  grid-template-areas:  'header header header'
+                        'barra barra barra'
+                        'turnos-main turnos-aside aside-redes'
+                        'footer footer footer';
+  grid-template-columns: 30% auto 30%;
+  grid-template-rows: 100px auto auto auto;
+  gap: 0 20px;
+}
+
+#turnos-aside{
+  grid-area: turnos-aside;
+
+}
+#turnos-main{ grid-area: turnos-main;
+  margin: 30px 0;
+}
+
+@media only screen and (max-width: 980px) {
+  #turnos-grid{
+    grid-template-areas:  'header header'
+                          'barra barra'
+                          'turnos-main turnos-aside'
+                          'aside-redes aside-redes'
+                          'footer footer';
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #turnos-grid{
+    grid-template-areas:  'header'
+                          'barra'
+                          'turnos-main'
+                          'aside-redes'
+                          'turnos-aside'
+                          'footer ';
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto auto auto auto auto;
+  }
+}
+
+/*Maquetado de adopcion.html*/
+
+#adopcion-main{ grid-area: adopcion-main;
+  margin-right: 20px;
+}
+
+#adopcion-grid{
+  display: grid;
+  grid-template-areas:  'header'
+                        'barra'
+                        'adopcion-main'
+                        'footer';
+  grid-template-columns: auto;
+  grid-template-rows: 100px auto auto auto;
 }
   
 .menu a {
@@ -150,6 +209,8 @@ text-align: center;
   border-radius: 50px;
   text-align: center;
   font-size: 18px;
+  height: 450px;
+  width: 290px;
 }
 
 .boton{
@@ -165,8 +226,20 @@ text-align: center;
   background-color: #e7b293;
 }
 
+.formulario h2 {
+  margin: 20px 15px;
+}
+
+.formulario input {
+  margin: 10px;
+  width: 60%;
+}
 
 /*ADOPCION*/
+
+#adopcion-texto {
+  margin: 40px;
+}
 
 .contenedor{
   width: 100%;
@@ -213,15 +286,16 @@ text-align: center;
   background-color: rgb(209, 189, 145);
 }
 
+
 @media screen and (max-width:700px) { 
   .contenedor { 
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width:768px) {
   .contenedor {
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(3, 1fr)
   }
 } 
 
