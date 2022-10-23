@@ -1,0 +1,439 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+/*Maquetado de los HTML*/
+
+header, .menu, main, #aside, footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#index-grid{
+  display: grid;
+  grid-template-areas:  ' header header'
+                        ' barra barra'
+                        'cajacarrusel cajacarrusel'
+                        'contenedorfiltro secciónalimentos'
+                        ' main aside'
+                        'footer footer';
+  grid-template-columns: 65% auto;
+  grid-template-rows: 100px auto auto auto;
+  gap: 0 20px;
+}
+#index-grid-pet{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:  ' header header'
+                        ' barra barra'
+                        'cajacarrusel cajacarrusel'
+                        'contenedorfiltro secciónalimentos'
+                        ' main aside'
+                        'footer footer';
+  grid-template-columns: repeat(3,100px);
+  grid-template-rows: 100px auto auto auto;
+  gap:10px;
+
+}
+
+body {
+  height: 100%;
+}
+
+header{
+  grid-area: header;
+  color: #5a5a4b;
+  padding: 2px;
+  height: 100%;
+}
+
+.menu {
+  grid-area: barra;
+  justify-content: right;
+}
+
+#index-main{ grid-area: main;}
+#aside{ grid-area: aside;}
+footer{ grid-area: footer;}
+
+@media only screen and (max-width: 980px) {
+  #index-grid{
+    grid-template-areas:  'header'
+                          'barra'
+                          'article'
+                          'main'
+                          'aside'
+                          'footer';
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto auto auto auto;
+  }
+
+  #aside{
+    margin: 20px 0 20px;
+  }
+
+  .mapacuadro iframe{
+    width: 100%;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+}
+
+.menu {
+  float:none;
+  background-color: #5a5a4b;
+  text-align: right;
+}
+  
+.menu a {
+  background-color: #5a5a4b;
+  color: #dfe6a3;
+  border-radius:10px;
+  margin: 15px;
+  padding: 8px;
+}
+  
+.menu a:hover {
+  background-color: #5f5e58;
+}
+
+  /*SLIDER*/
+
+  .slider{
+    overflow: hidden;
+  }
+
+  .slider ul{
+    display: flex;
+    animation: cambio 10s infinite alternate ;
+    width: 400%;
+  }
+  .slider li{
+    width: 100%;
+    list-style: none;
+  }
+  .slider img{
+    width: 100%;
+    height: 100%;
+  }
+  @keyframes cambio{
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+  }
+
+/*CUADRO DE REDES*/
+
+.redescuadro{
+  background-color:#dfe6a3;
+  border-radius: 50px;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.redescuadro > *{
+  margin: 20px;
+}
+
+#aside a, aside p{
+  padding: 10px;
+  font-size: 18px;
+}
+
+.mapacuadro{
+  padding: 20px;
+  background-color: #5a5a4b;
+  color: #dfe6a3;
+  width: 100%;
+text-align: center;
+}
+
+/*TURNOS*/
+
+/*FORMULARIO*/
+
+.formulario{
+  background-color:#dfe6a3;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.boton{
+  font-weight: bold;
+  border: none;
+  color: #ffffff;
+  background-color: grey;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.boton:hover{
+  background-color: #e7b293;
+}
+
+
+/*ADOPCION*/
+
+.contenedor{
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: .5rem;
+  row-gap: .5rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.mascota{
+  width: 93%;
+  margin: 20px;
+  border-radius: 50px;
+  overflow: hidden;
+  background: rgb(245, 244, 241);
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+.mascota:hover {
+  transform: translateY(-6%);
+}
+
+.mascota img { 
+  max-width: 100%;
+  height: auto;
+}
+
+.mascota .contenido { 
+  padding: 15px;
+  text-align:left;
+}
+
+.mascota .contenido p { 
+  line-height: 1.5;
+  color: black;
+}
+
+.mascota .contenido > h3 {
+  margin-bottom: 10px;
+  background-color: rgb(209, 189, 145);
+}
+
+@media screen and (max-width:700px) { 
+  .contenedor { 
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .contenedor {
+    grid-template-columns: repeat(2, 1fr)
+  }
+} 
+
+@media screen and (min-width: 1024px) {
+  .contenedor {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*Pet Shop*/
+
+/*Filtros*/
+.filtros {
+  margin-top: 30px ;
+  width: 247px;
+}
+.contenedorfiltro {
+  margin-top: 180px;
+  margin-left: 20px;
+  width: 18%;
+  max-width: 75em;
+}
+.category_list{
+  margin-bottom:20px;
+}
+.category-item {
+  text-decoration: none;
+  color: black;
+}
+/*Filtros*/
+
+.todoslosproductos {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  display:flex;
+  margin-left: 350px;
+  margin-top: -360px;
+}
+
+/*Sección de artículos*/
+.divrecuadro1 {
+  width: auto;
+  height: 392px;
+  margin: 0;
+  padding: 0;
+}
+.divrecuadro2 {
+  width: auto;
+  height: 392px;
+  margin: 0;
+  padding: 0;
+}
+.divrecuadro3 {
+  width: auto;
+  height: 392px;
+  margin: 0;
+  padding: 0;
+}
+.product-item {
+  width: 232px;
+  height: 392px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 2px #908989;
+  right: 328px;
+  top: 511px;
+  display: block;
+  float:left;
+  flex-direction: row;
+  margin: 7px;
+}
+.secciónalimentos div{
+  text-align: center;
+}
+.marca {
+  font-size: 14px;
+  color: #666666;
+  margin-left: 5px;
+}
+
+.cajadescripción {
+  width: 220px;
+  height: 46px;
+  margin: 7px;
+}
+.cajaprecio {
+  width: 220px;
+  height: 10px;
+  margin: 2px;
+  padding: 1px;
+}
+.btn-center {
+  margin-top: 20px;
+}
+.disponibilidad {
+  font-size: 14px;
+}
+.descripcion {
+  font-size: 14px;
+  color: black;
+}
+.precio {
+  margin-left: 160px;
+  font-size: 13px;
+}
+.filtro {
+  top: 20px;
+  font-family: none;
+  font-weight: 100;
+}
+.secciónalimentos {
+  flex-direction: row;
+  width: auto;
+  margin-left: 350px;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: .6rem;
+  row-gap: .6rem;
+  align-content: center;
+  flex-direction: column;
+  float:none;
+}
+.secciónalimentos .contenedora {
+  text-align: justify;
+}
+.secciónalimentos .contenedorb {
+  text-align: justify;
+}
+.filtroP {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration:none;
+  color: black;
+}
+.category_list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+}
+.marcas {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media screen and (min-width: 1024px) {
+  .secciónalimentos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*Sección de artículos*/
+
+/* Carrusel Pet */
+.cajacarrusel {
+  width: 100%;
+  overflow: hidden;
+  align-items: right;
+  padding:0;
+  margin:0;
+  height: 532px;
+  grid-column: 1/6;
+}
+.carruselpet {
+  box-shadow: 2px 2px 2px 2px #e2e2e2;
+  width: 100%;
+  height: 532px;
+  margin: auto;
+  overflow: hidden;
+
+}
+.carruselpet ul {
+  display: flex;
+  padding: 0;
+  width: 200%;
+  animation: carrusel 8s infinite;
+  animation-timing-function: ease-out linear;
+  margin-top: 0px;
+  
+}
+.carruselpet li {
+  width: 100%;
+  list-style: none;
+}
+@keyframes carrusel {
+  0% {margin-left: 0;}
+  40% { margin-left: 0%;}
+
+  60% { margin-left: -100%;}
+  100% { margin-left: -100%;}
+}
+/*Carrusel Pet*/
