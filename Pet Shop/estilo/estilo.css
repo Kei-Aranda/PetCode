@@ -127,6 +127,21 @@ footer{ grid-area: footer;}
   grid-template-columns: auto;
   grid-template-rows: 100px auto auto auto;
 }
+
+/*Maquetado de PetShop.html*/
+
+#pet-grid{
+  display: grid;
+  grid-template-areas:  'header'
+                        'barra'
+                        'pet-main'
+                        'footer';
+  grid-template-columns: 100%;
+  grid-template-rows: 100px auto auto auto;
+}
+
+#pet-main{ grid-area: pet-main;
+}
   
 .menu a {
   background-color: #5a5a4b;
@@ -304,3 +319,198 @@ text-align: center;
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+
+/* FORMATO validación de formulario */
+.formulario_grupo-correcto .formulario_label{
+  color: #124d0a;
+}
+.formulario_grupo-correcto .formulario_input{
+  border: 3px solid #124d0a;
+}
+.formulario_grupo-incorrecto .formulario_label{
+  color: rgb(116, 23, 23);
+}
+.formulario_grupo-incorrecto .formulario_input{
+  border: 3px solid rgb(116, 23, 23);
+}
+
+/*Pet Shop*/
+
+/*Filtros*/
+.filtros {
+  margin-top: 30px ;
+  width: 247px;
+}
+.contenedorfiltro {
+  margin-top: 180px;
+  margin-left: 20px;
+  width: 18%;
+  max-width: 75em;
+}
+.category_list{
+  margin-bottom:20px;
+}
+.category-item {
+  text-decoration: none;
+  color: black;
+}
+/*Filtros*/
+
+.todoslosproductos {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  display:flex;
+  margin-left: 350px;
+  margin-top: -360px;
+}
+
+/*Sección de artículos*/
+.divrecuadro1 {
+  width: auto;
+  height: 392px;
+  margin: 0;
+  padding: 0;
+}
+.divrecuadro2 {
+  width: auto;
+  height: 392px;
+  margin: 0;
+  padding: 0;
+}
+.divrecuadro3 {
+  width: auto;
+  height: 392px;
+  margin: 0;
+  padding: 0;
+}
+.product-item {
+  width: 232px;
+  height: 392px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 2px #908989;
+  right: 328px;
+  top: 511px;
+  display: block;
+  float:left;
+  flex-direction: row;
+  margin: 7px;
+}
+.secciónalimentos div{
+  text-align: center;
+}
+.marca {
+  font-size: 14px;
+  color: #666666;
+  margin-left: 5px;
+}
+
+.cajadescripción {
+  width: 220px;
+  height: 46px;
+  margin: 7px;
+}
+.cajaprecio {
+  width: 220px;
+  height: 10px;
+  margin: 2px;
+  padding: 1px;
+}
+.btn-center {
+  margin-top: 20px;
+}
+.disponibilidad {
+  font-size: 14px;
+}
+.descripcion {
+  font-size: 14px;
+  color: black;
+}
+.precio {
+  margin-left: 160px;
+  font-size: 13px;
+}
+.filtro {
+  top: 20px;
+  font-family: none;
+  font-weight: 100;
+}
+.secciónalimentos {
+  flex-direction: row;
+  width: auto;
+  margin-left: 350px;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: .6rem;
+  row-gap: .6rem;
+  align-content: center;
+  flex-direction: column;
+  float:none;
+}
+.secciónalimentos .contenedora {
+  text-align: justify;
+}
+.secciónalimentos .contenedorb {
+  text-align: justify;
+}
+.filtroP {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration:none;
+  color: black;
+}
+.category_list {
+  display: flex;
+  flex-direction: column;
+}
+.marcas {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media screen and (min-width: 1024px) {
+  .secciónalimentos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*Sección de artículos*/
+
+/* Carrusel Pet */
+.cajacarrusel {
+  width: 100%;
+  overflow: hidden;
+  align-items: right;
+  height: 532px;
+  grid-column: 1/6;
+}
+.carruselpet {
+  box-shadow: 2px 2px 2px 2px #e2e2e2;
+  width: 100%;
+  height: 532px;
+  margin: auto;
+  overflow: hidden;
+
+}
+.carruselpet ul {
+  display: flex;
+  width: 200%;
+  animation: carrusel 8s infinite;
+  animation-timing-function: ease-out linear;
+
+}
+.carruselpet li {
+  width: 100%;
+  list-style: none;
+}
+@keyframes carrusel {
+  0% {margin-left: 0;}
+  40% { margin-left: 0%;}
+
+  60% { margin-left: -100%;}
+  100% { margin-left: -100%;}
+}
+/*Carrusel Pet*/
+

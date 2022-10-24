@@ -6,59 +6,276 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./imagenes/Logo PetCode.png" type="image/x-icon">
-    <link rel="stylesheet" href="./estilo/estilopet.css">
+    <link rel="stylesheet" href="./estilo/estilo.css">
+    <script src="./js/jquery-3.6.1.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
     <title>PetShop</title>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="container">
-                <div class="navbar">
-                    <img src="./imagenes/Logo PetCode.png" class="Logo" alt="Pet Code" width="60">
-                    <ul>
-                        <li><a href="index.html">Menu</a></li>
-                        <li><a href="Turnos.html">Turnos</a></li>
-                        <li><a href="PetShop.html">Alimentos</a></li>
-                        <li><a href="Adopcion.html">Adopción</a></li>
-                    </ul>
-                    <a href="carrito.html">
-                        <img src="./imagenes/shopping-cart.png" alt="Carrito" class="Carrito" width="23">
-                    </a>
+<body id="pet-grid">
+
+    <script src="./Javascript/header.js"></script>
+
+    <article id="pet-main">
+        <div class="cajacarruselpet" id="cajacarrusel">
+            <div class="carruselpet">
+                <ul>
+                    <li><img src="./fotos/petshop/banner pet.png" alt=""></li>
+                    <li><img src="./fotos/petshop/banner pet1.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contenedorfiltro" id="contenedorfiltro">
+            <p class="filtroP">Filtros</p>
+            <br>
+            <p>_______________________</p>
+            <br>
+            <p class="filtroP">Marcas</p>
+            <div class="filtros">
+                <div class="category_list">
+                    <a href="#" class="category-item" category="all">Todo</a>
+                    <a href="#" class="category-item" category="Excellent">Excellent </a>
+                    <a href="#" class="category-item" category="ManteinanceCriadores">Maintenance Criadores </a>
+                    <a href="#" class="category-item" category="OldPrice">Old Price </a>
+                    <a href="#" class="category-item" category="ProPlan">Pro Plan </a>
+                    <a href="#" class="category-item" category="RoyalCanin">Royal Canin </a>
                 </div>
             </div>
-        </nav>
-    </header>
-    <main>
-        <div class="Filtrodealimentos">
-            <img src="./imagenes/perro.jpeg" class="imgRedonda1" alt="Alimento para perros" />
-            <img src="./imagenes/gato.jpeg" class="imgRedonda2" alt="Alimento para gatos" />
-            <p>Perros</p>
-            <p>Gatos</p>
         </div>
 
-    </main>
+        <h2 class="todoslosproductos">Todos los productos</h2>
+        <br>
+        <div class="secciónalimentos" id="secciónalimentos">
+            <div class="divrecuadro1">
+                <div class="product-item" category="ManteinanceCriadores">
+                    <br>
+                    <img class="Maintenance" src="./fotos/petshop/PHOTO-2022-09-08-15-39-25 2.jpg" width="218px"
+                        height="202px" />
+                    <br>
+                    <br>
+                    <div class="cajamarca">
+                        <p class="marca">Manteinance criadores</p>
+                    </div>
+                    <div class="cajadescripción">
+                        <p class="descripcion">Manteinance criadores Adulto - 22kg</p>
+                    </div>
+                    <div class="cajaprecio">
+                        <p class="precio">$4140,00</p>
+                    </div>
+                    <div class="btn-center">
+                        <p class="disponibilidad">Disponible en nuestra tienda física.</p>
+                    </div>
+                </div>
+                <div class="product-item" category="OldPrice">
+                    <br>
+                    <img class="Old Price" src="./fotos/petshop/PHOTO-2022-09-08-15-39-25.jpg" width="218px"
+                        height="202px" />
+                    <br>
+                    <br>
+                    <div class="cajamarca">
+                        <p class="marca">Old Price</p>
+                    </div>
 
-    <footer>
-        <img src="./imagenes/Logo PetCode.png" class="Logofooter" alt="Pet Code" width="80">
-        <a target="_blank" href="https://">
-            <img width="40px" src="./imagenes/icons8-mail-50.png" alt="Email" width="5">
-        </a>
-        <a target="_blank" href="https://">
-            <img width="40px" src="./imagenes/icons8-whatsapp-24.png" alt="Whatsapp" width="5">
-        </a>
-        <a target="_blank" href="https://">
-            <img width="40px" src="./imagenes/icons8-instagram-50.png" alt="Instagram" width="5">
-        </a>
-        <a target="_blank" href="https://">
-            <img width="40px" src="./imagenes/icons8-facebook-50.png" alt="Facebook" width="5">
-        </a>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32839.31450844942!2d11.290780318264327!3d43.322365449409446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132be046ad6eda45%3A0x5b3c53bf4f2571e4!2sHotel%20Italia%20Siena!5e0!3m2!1ses-419!2sar!4v1660857380333!5m2!1ses-419!2sar"
-            width="100" height="100" style="border: 7px;;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="cajadescripción">
+                        <p class="descripcion">Alimento old price novel cordero y arroz perro adulto mediano y grande
+                        </p>
+                    </div>
+                    <div class="cajaprecio">
+                        <p class="precio">$4140,00</p>
+                    </div>
 
-    </footer>
+                    <div class="btn-center">
+                        <p class="disponibilidad">Disponible en nuestra tienda física.</p>
+                    </div>
+                </div>
+                <div class="product-item" category="Excellent">
+                    <br>
+                    <img class="Excellent" src="./fotos/petshop/PHOTO-2022-09-08-15-39-26 2.jpg" width="218px"
+                        height="202px" />
+                    <br>
+                    <br>
+                    <div class="cajamarca">
+                        <p class="marca">Excellent</p>
+                    </div>
+
+                    <div class="cajadescripción">
+                        <p class="descripcion">Alimento Excellent para Perro Adulto Mediano y Grande</p>
+                    </div>
+                    <div class="cajaprecio">
+                        <p class="precio">$2095,00</p>
+                    </div>
+                    <div class="btn-center">
+                        <p class="disponibilidad">Disponible en nuestra tienda física.</p>
+                    </div>
+                </div>
+                <div class="product-item" category="RoyalCanin">
+                    <br>
+                    <img class="RoyalCanin" src="./fotos/petshop/PHOTO-2022-09-08-15-39-26.jpg" width="218px"
+                        height="202px" />
+                    <br>
+                    <br>
+                    <div class="cajamarca">
+                        <p class="marca">Royal Canin</p>
+                    </div>
+
+                    <div class="cajadescripción">
+                        <p class="descripcion">Alimento Royal Canin Maxi Adulto -15kg</p>
+                    </div>
+                    <div class="cajaprecio">
+                        <p class="precio">$12.768,00</p>
+                    </div>
+                    <div class="btn-center">
+                        <p class="disponibilidad">Disponible en nuestra tienda física.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="divrecuadro2" category="ProPlan">
+                <div class="product-item">
+                    <br>
+                    <img class="Old Price" src="./fotos/petshop/PHOTO-2022-09-08-15-39-27 2.jpg" width="218px"
+                        height="202px" />
+                    <br>
+                    <br>
+                    <div class="cajamarca">
+                        <p class="marca">Pro Plan</p>
+                    </div>
+
+                    <div class="cajadescripción">
+                        <p class="descripcion">Alimento Pro Plan Reduced Calorie para Perro Adulto - 3 Kg</p>
+                    </div>
+                    <div class="cajaprecio">
+                        <p class="precio">$4115,00</p>
+                    </div>
+                    <div class="btn-center">
+                        <p class="disponibilidad">Disponible en nuestra tienda física.</p>
+                    </div>
+                </div>
+
+                <div class="product-item" category="OldPrice">
+                    <br>
+                    <img class="Old Price" src="./fotos/petshop/PHOTO-2022-09-08-15-39-27.jpg" width="218px"
+                        height="202px" />
+                    <br>
+                    <br>
+                    <div class="cajamarca">
+                        <p class="marca">Old Price</p>
+                    </div>
+                    <div class="cajadescripción">
+                        <p class="descripcion">Alimento Old Prince Receta Original Para Perro Adulto - 7,5Kg</p>
+                    </div>
+                    <div class="cajaprecio">
+                        <p class="precio">$4115,00</p>
+                    </div>
+                    <div class="btn-center">
+                        <p class="disponibilidad">Disponible en nuestra tienda física.</p>
+                    </div>
+                </div>
+                <div class="product-item" category="RoyalCanin">
+                    <br>
+                    <img class="RoyalCanin" src="./fotos/petshop/PHOTO-2022-09-08-15-39-29.jpg" width="218px"
+                        height="202px" />
+                    <br>
+                    <br>
+                    <div class="cajamarca">
+                        <p class="marca">Royal Canin</p>
+                    </div>
+                    <div class="cajadescripción">
+                        <p class="descripcion">Alimento Royal Canin Club Performance Adulto - 15 Kg</p>
+                    </div>
+                    <div class="cajaprecio">
+                        <p class="precio">$9690,00</p>
+                    </div>
+                    <div class="btn-center">
+                        <p class="disponibilidad">Disponible en nuestra tienda física.</p>
+                    </div>
+                </div>
+                <div class="product-item" category="RoyalCanin">
+                    <br>
+                    <img class="RoyalCanin" src="./fotos/petshop/PHOTO-2022-09-08-15-48-58 2.jpg " width="218px"
+                        height="202px" />
+                    <br>
+                    <br>
+                    <div class="cajamarca">
+                        <p class="marca">Royal Canin</p>
+                    </div>
+                    <div class="cajadescripción">
+                        <p class="descripcion">Alimento Royal Canin Fit 32 - 400 Gr</p>
+                    </div>
+                    <div class="cajaprecio">
+                        <p class="precio">$1117,00</p>
+                    </div>
+                    <div class="btn-center">
+                        <p class="disponibilidad">Disponible en nuestra tienda física.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="divrecuadro3">
+                <div class="product-item" category="Excellent">
+                    <br>
+                    <img class="Excellent" src="./fotos/petshop/PHOTO-2022-09-08-15-48-58.jpg" width="218px"
+                        height="202px" />
+                    <br>
+                    <br>
+                    <div class="cajamarca">
+                        <p class="marca">Excellent</p>
+                    </div>
+                    <div class="cajadescripción">
+                        <p class="descripcion">Alimento Excellent Gato Sterilized Pollo - 1 kg</p>
+                    </div>
+                    <div class="cajaprecio">
+                        <p class="precio">$1490,00</p>
+                    </div>
+                    <div class="btn-center">
+                        <p class="disponibilidad">Disponible en nuestra tienda física.</p>
+                    </div>
+                </div>
+                <div class="product-item" category="OldPrice">
+                    <br>
+                    <img class="Old Price" src="./fotos/petshop/PHOTO-2022-09-08-15-49-01.jpg" width="218px"
+                        height="202px" />
+                    <br>
+                    <br>
+                    <div class="cajamarca">
+                        <p class="marca">Old Price</p>
+                    </div>
+                    <div class="cajadescripción">
+                        <p class="descripcion">Alimento Old Prince Novel Gato Adulto - 3 Kg</p>
+                    </div>
+                    <div class="cajaprecio">
+                        <p class="precio">$3610,00</p>
+                    </div>
+                    <div class="btn-center">
+                        <p class="disponibilidad">Disponible en nuestra tienda física.</p>
+                    </div>
+                </div>
+                <div class="product-item" category="Excellent">
+                    <br>
+                    <img class="Excellent" src="./fotos/petshop/PHOTO-2022-09-08-15-49-03.jpg" width="218px"
+                        height="202px" />
+                    <br>
+                    <br>
+                    <div class="cajamarca">
+                        <p class="marca">Excellent</p>
+                    </div>
+                    <div class="cajadescripción">
+                        <p class="descripcion">Alimento Excellent Urinary Arroz y Pollo para Gato - 1 Kg</p>
+                    </div>
+                    <div class="cajaprecio">
+                        <p class="precio">$1525,00</p>
+                    </div>
+                    <div class="btn-center">
+                        <p class="disponibilidad">Disponible en nuestra tienda física.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </article>
+
+    <script src="./Javascript/footer.js"></script>
 
 </body>
 
