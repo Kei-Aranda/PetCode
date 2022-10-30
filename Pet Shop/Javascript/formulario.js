@@ -29,6 +29,11 @@ async function handleSubmit(e){
         if (response.ok){
             form.reset();
 
+            setInitFor(firstname);
+            setInitFor(lastname);
+            setInitFor(tel);
+            setInitFor(email);
+
             alert('Formulario enviado correctamente');
 
             campos.firstname=false;
@@ -106,6 +111,12 @@ function setSuccessFor(input) {
     formControl.className = 'form-control success';
 }
 
+function setInitFor(input) {
+    const formControl = input.parentElement;
+
+    formControl.className = 'form-control init';
+}
+
 function isFirstname(firstname) {
     return /^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(firstname);
 }
@@ -121,3 +132,10 @@ function isTel(tel) {
 function isEmail(email) {
     return /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(email);
 }
+
+form.addEventListener('reset', () => {
+    setInitFor(firstname);
+    setInitFor(lastname);
+    setInitFor(tel);
+    setInitFor(email);
+})

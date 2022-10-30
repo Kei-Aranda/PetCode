@@ -428,6 +428,8 @@ text-align: center;
   font-weight: bold;
   text-decoration:none;
   color: black;
+  border-bottom: 2px black solid;
+  margin-bottom: 10px;
 }
 .category_list {
   display: flex;
@@ -447,7 +449,7 @@ text-align: center;
 
 /* Carrusel Pet */
 
-.carruselpet {
+/* .carruselpet {
   box-shadow: 2px 2px 2px 2px #e2e2e2;
   width: auto;
   height: 532px;
@@ -473,7 +475,7 @@ text-align: center;
 
   60% { margin-left: -100%;}
   100% { margin-left: -100%;}
-}
+} */
 /*Carrusel Pet*/
 
 
@@ -484,4 +486,8 @@ text-align: center;
 
 .form-control.error input{
   border-color: #e74c3c;
+}
+
+.form-control.init input{
+  border-color: inherit;
 }
