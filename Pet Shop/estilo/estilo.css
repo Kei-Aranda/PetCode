@@ -320,21 +320,6 @@ text-align: center;
   }
 }
 
-
-/* FORMATO validación de formulario */
-.formulario_grupo-correcto .formulario_label{
-  color: #124d0a;
-}
-.formulario_grupo-correcto .formulario_input{
-  border: 3px solid #124d0a;
-}
-.formulario_grupo-incorrecto .formulario_label{
-  color: rgb(116, 23, 23);
-}
-.formulario_grupo-incorrecto .formulario_input{
-  border: 3px solid rgb(116, 23, 23);
-}
-
 /*Pet Shop*/
 
 /*Filtros*/
@@ -367,24 +352,6 @@ text-align: center;
 }
 
 /*Sección de artículos*/
-.divrecuadro1 {
-  width: auto;
-  height: 392px;
-  margin: 0;
-  padding: 0;
-}
-.divrecuadro2 {
-  width: auto;
-  height: 392px;
-  margin: 0;
-  padding: 0;
-}
-.divrecuadro3 {
-  width: auto;
-  height: 392px;
-  margin: 0;
-  padding: 0;
-}
 .product-item {
   width: 232px;
   height: 392px;
@@ -479,25 +446,18 @@ text-align: center;
 /*Sección de artículos*/
 
 /* Carrusel Pet */
-.cajacarrusel {
-  width: 100%;
-  overflow: hidden;
-  align-items: right;
-  height: 532px;
-  grid-column: 1/6;
-}
+
 .carruselpet {
   box-shadow: 2px 2px 2px 2px #e2e2e2;
-  width: 100%;
+  width: auto;
   height: 532px;
-  margin: auto;
   overflow: hidden;
 
 }
 .carruselpet ul {
   display: flex;
   width: 200%;
-  animation: carrusel 8s infinite;
+  animation: carrusel 10s infinite;
   animation-timing-function: ease-out linear;
 
 }
@@ -505,6 +465,8 @@ text-align: center;
   width: 100%;
   list-style: none;
 }
+
+
 @keyframes carrusel {
   0% {margin-left: 0;}
   40% { margin-left: 0%;}
@@ -514,3 +476,12 @@ text-align: center;
 }
 /*Carrusel Pet*/
 
+
+
+.form-control.success input{
+  border-color: #2ecc71;
+}
+
+.form-control.error input{
+  border-color: #e74c3c;
+}

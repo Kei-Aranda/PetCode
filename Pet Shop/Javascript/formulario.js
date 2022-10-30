@@ -1,60 +1,123 @@
-const formulario = document.getElementById('formulario');
-const inputs = document.querySelectorAll('#formulario input');
-
-const expresiones = {
-	firstname: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    lastname: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	tel: /^\d{7,14}$/, // 7 a 14 numeros.
-    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
-}
-
+const form = document.getElementById('formulario');
+const firstname = document.getElementById('firstname');
+const lastname = document.getElementById('lastname');
+const tel = document.getElementById('tel');
+const email = document.getElementById('email');
 const campos = {
     firstname: false,
     lastname: false,
     tel: false,
     email: false
-}
-
-const validarCampo = (expresion, input, campo) => {
-    if(expresion.test(input.value)){
-        document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
-        document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
-        campos[campo] = true;
-    } else {
-        document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
-        document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
-        campos[campo] = false;
-    }
 };
 
+form.addEventListener('submit', handleSubmit);
 
-const validarFormulario = (e) => {
-    switch (e.target.name) {
-        case "firstname":
-            validarCampo(expresiones.firstname, e.target, 'firstname');
-        break;
-        case "lastname":
-            validarCampo(expresiones.lastname, e.target, 'lastname');
-        break;
-        case "tel":
-            validarCampo(expresiones.tel, e.target, 'tel');
-        break;
-        case "email":
-            validarCampo(expresiones.email, e.target, 'email');
-        break;
+async function handleSubmit(e){
+    e.preventDefault();
+
+    checkInputs();
+
+    if(campos.firstname && campos.lastname && campos.tel && campos.email) {
+        const formulario = new FormData(this);
+        const response = await fetch(this.action, {
+            method: this.method,
+            body: formulario,
+            headers:{
+                'Accept': 'application/json'
+            }
+        });
+        if (response.ok){
+            form.reset();
+
+            alert('Formulario enviado correctamente');
+
+            campos.firstname=false;
+            campos.lastname=false;
+            campos.tel=false;
+            campos.email=false;
+        }else {
+            alert('Error en el envío del mensaje');
+        }
+
+        
+    } 
+};
+
+function checkInputs() {
+    const firstnameValue = firstname.value.trim();
+    const lastnameValue = lastname.value.trim();
+    const telValue = tel.value.trim();
+    const emailValue = email.value.trim();
+
+    if (firstnameValue === '') {
+        setErrorFor(firstname);
+        campos.firstname = false;
+    } else if(!isFirstname(firstnameValue)) {
+        setErrorFor(firstname);
+        campos.firstname = false;
+    } else {
+        setSuccessFor(firstname);
+        campos.firstname = true;
+    }
+
+    if (lastnameValue === '') {
+        setErrorFor(lastname);
+        campos.lastname = false;
+    } else if(!isLastname(lastnameValue)) {
+        setErrorFor(lastname);
+        campos.lastname = false;
+    } else {
+        setSuccessFor(lastname);
+        campos.lastname = true;
+    }
+
+    if (telValue === '') {
+        setErrorFor(tel);
+        campos.tel = false;
+    } else if(!isTel(telValue)) {
+        setErrorFor(tel);
+        campos.tel = false;
+    } else {
+        setSuccessFor(tel);
+        campos.tel = true;
+    }
+
+    if (emailValue === '') {
+        setErrorFor(email);
+        campos.email = false;
+    } else if(!isEmail(emailValue)) {
+        setErrorFor(email);
+        campos.email = false;
+    } else {
+        setSuccessFor(email);
+        campos.email = true;
     }
 }
 
-inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
-});
+function setErrorFor(input) {
+    const formControl = input.parentElement;
 
-formulario.addEventListener('submit', (e) => {
-    e.preventDefault();
+    formControl.className = 'form-control error';
+}
 
-    if(campos.firstname && campos.lastname && campos.tel && campos.email) {
-        formulario.submit();
-        formulario.reset();
-    }
-});
+function setSuccessFor(input) {
+    const formControl = input.parentElement;
+
+    formControl.className = 'form-control success';
+}
+
+function isFirstname(firstname) {
+    return /^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(firstname);
+}
+
+function isLastname(lastname) {
+    return /^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(lastname);
+}
+
+function isTel(tel) {
+    return /^\d{7,14}$/.test(tel);
+}
+
+function isEmail(email) {
+    return /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(email);
+}
