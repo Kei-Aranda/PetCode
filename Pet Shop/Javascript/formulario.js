@@ -114,7 +114,7 @@ function setSuccessFor(input) {
 function setInitFor(input) {
     const formControl = input.parentElement;
 
-    formControl.className = 'form-control init';
+    formControl.className = 'form-control';
 }
 
 function isFirstname(firstname) {

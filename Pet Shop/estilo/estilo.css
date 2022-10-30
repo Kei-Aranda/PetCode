@@ -487,7 +487,3 @@ text-align: center;
 .form-control.error input{
   border-color: #e74c3c;
 }
-
-.form-control.init input{
-  border-color: inherit;
-}
